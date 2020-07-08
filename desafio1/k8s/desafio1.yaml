@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: desafio1-go-deployment
+  labels:
+    app: desafio1-go
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: desafio1-go
+  template:
+    metadata:
+      labels:
+        app: desafio1-go
+    spec:
+      containers:
+      - name: desafio1-go
+        image: afpfullcyclemaratona3/desafio1-go:v1
+        resources: {}
+        ports:
+        - containerPort: 8080

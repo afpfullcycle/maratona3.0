@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: desafio1-go-service
+spec:
+  selector:
+    app: desafio1-go
+  ports:
+  - port: 81
+    targetPort: 8080
+  type: NodePort
